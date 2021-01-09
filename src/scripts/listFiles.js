@@ -20,6 +20,7 @@ const getListFiles = (dir, files_) => {
       console.log(e.name);
     }
   }
+
   return files_;
 }
 

@@ -4,8 +4,10 @@ const path = require('path');
 const { type } = require('os');
 const { error } = require('console');
 
+
 const db = {
-  rar_5: [82, 97, 114, 33, 26, 7, 1, 0],
+  rar_v5: [82, 97, 114, 33, 26, 7, 1, 0],
+  rar_v4: [82, 97, 114, 33, 26, 7, 0],
 }
 
 let archiveBtn = document.getElementById('archive__btn');
@@ -56,7 +58,8 @@ const compareHeandler = (files, dbT) => {
       })
     }
     archiveProcessedFiles.innerHTML = `<p>Обработанно файлов: ${indexF + 1}</p>`
-  })
+  });
+  console.log(newArr);
   return newArr;
 }
 
